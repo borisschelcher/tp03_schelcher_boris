@@ -1,7 +1,5 @@
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
 <form [formGroup]="userForm" (ngSubmit)="onSubmitForm()">
-    <div class="form-row">
+    <div class="row g-2">
         <div class="form-group col-md-6">
             <label for="NOM">Nom</label>
             <input type="text" formControlName="NOM" class="form-control" placeholder="Nom">
@@ -12,7 +10,7 @@
         </div>
     </div>
 
-    <div class="form-row">
+    <div class="row g-2">
         <div class="form-group col-md-6">
             <label for="ADRESSE">Adresse</label>
             <input type="text" formControlName="ADRESSE" class="form-control" placeholder="Adresse">
@@ -23,7 +21,7 @@
         </div>
     </div>
 
-    <div class="form-row">
+    <div class="row g-2">
         <div class="form-group col-md-6">
             <label for="VILLE">Ville</label>
             <input type="text" formControlName="VILLE" class="form-control" placeholder="VILLE">
@@ -34,7 +32,7 @@
         </div>
     </div>
 
-    <div class="form-row">
+    <div class="row g-2">
         <div class="form-group col-md-6">
             <label for="EMAIL">Email</label>
             <input type="email" formControlName="EMAIL" class="form-control" placeholder="Email">
@@ -49,7 +47,7 @@
         </div>
     </div>
 
-    <div class="form-row">
+    <div class="row g-2">
         <div class="form-group col-md-6">
             <label for="PASSWORD">Password</label>
             <input type="password" formControlName="PASSWORD" class="form-control" placeholder="Password">
@@ -60,7 +58,7 @@
         </div>
     </div>
 
-    <div class="form-row">
+    <div class="row g-2">
         <div class="form-group col-md-6">
             <label for="LOGIN">Login</label>
             <input type="text" formControlName="LOGIN" class="form-control" placeholder="Login">
@@ -71,9 +69,6 @@
         </div>
     </div>
     <div id="subButton">
-        <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid">Envoyer</button>
+        <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid" style="margin-top:30px;">Envoyer</button>
     </div>
 </form>
-
-<app-recap-data>
-</app-recap-data>

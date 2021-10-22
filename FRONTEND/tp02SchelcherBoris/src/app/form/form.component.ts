@@ -54,7 +54,8 @@ export class FormComponent implements OnInit {
       formValue['LOGIN'],
       formValue['PAYS']
     );
-    if(newUser.PASSWORD === newUser.PASSWORDCONFIRM){
+    if(newUser.PASSWORD == newUser.PASSWORDCONFIRM){
+      this.userService.inSignin(newUser);
       this.router.navigate(['/recap-data']);  
   }
 }

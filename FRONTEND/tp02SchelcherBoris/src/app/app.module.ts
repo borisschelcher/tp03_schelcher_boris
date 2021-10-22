@@ -9,10 +9,19 @@ import { RecapDataComponent } from './recap-data/recap-data.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { ProductComponent } from './product/product.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { RefactorNumberPipe } from './refactor-number.pipe';
 
 const appRoutes: Routes = [
-  { path: '', component: AppComponent },
-  { path: 'recap-data', component: RecapDataComponent }
+  { path: "recap-data", component: RecapDataComponent },
+  { path: "form", component: FormComponent },
+  { path: "product", component: ProductComponent },
+  { path: "not-found", component: NotFoundComponent },
+  { path: "", component: HomeComponent },
+  { path: "**", redirectTo:'not-found' }
 ];
 @NgModule({
   declarations: [
@@ -22,15 +31,17 @@ const appRoutes: Routes = [
     HeaderComponent,
     RecapDataComponent,
     NavbarComponent,
+    HomeComponent,
+    ProductComponent,
+    NotFoundComponent,
+    RefactorNumberPipe,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    )
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

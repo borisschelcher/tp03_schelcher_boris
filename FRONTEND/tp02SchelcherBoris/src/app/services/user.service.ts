@@ -1,6 +1,8 @@
 import { Injectable } from "@angular/core";
+import { reference } from "@popperjs/core";
 import { Subject } from "rxjs";
 import { User } from "../models/User.model";
+import { RefactorNumberPipe } from "../refactor-number.pipe";
 
 @Injectable({
     providedIn: 'root'
@@ -22,5 +24,9 @@ user : User = new User(
         'FRANCE'
     
 );
+inSignin(User : User){
+this.user = User;
+
+};
 
 }

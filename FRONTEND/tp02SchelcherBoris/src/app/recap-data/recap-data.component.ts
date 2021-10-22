@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Pipe } from '@angular/core';
+import { User } from '../models/User.model';
+import { UserService } from '../services/user.service';
+import { RefactorNumberPipe } from '../refactor-number.pipe';
 
 @Component({
   selector: 'app-recap-data',
@@ -6,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recap-data.component.css']
 })
 export class RecapDataComponent implements OnInit {
-
-  constructor() { }
+  public user : User = new User("","","",0,"","","","","","","","")
+  constructor(private userService : UserService) { }
 
   ngOnInit(): void {
+    this.user = this.userService.user;
   }
 
 }

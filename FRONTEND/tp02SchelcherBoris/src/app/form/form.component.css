@@ -1,11 +1,11 @@
-.form-control:invalid{
+.form-control:invalid {
     background-color: red;
 }
 
-.form-control:valid{
+.form-control:valid {
     background-color: white;
 }
 
-#subButton{
+#subButton {
     text-align: center;
 }
