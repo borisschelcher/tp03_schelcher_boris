@@ -1,0 +1,8 @@
+[
+    { "ref": "121535", "libelle": "macbook pro", "prix": 2800 },
+    { "ref": "156848", "libelle": "iphone 12", "prix": 909 },
+    { "ref": "789456", "libelle": "apple watch", "prix": 400 },
+    { "ref": "128435", "libelle": "macbook air", "prix": 1800 },
+    { "ref": "156948", "libelle": "iphone 13 pro max", "prix": 1259 },
+    { "ref": "789456", "libelle": "ipod", "prix": 200 }
+]

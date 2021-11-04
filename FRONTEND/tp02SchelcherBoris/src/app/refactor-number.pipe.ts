@@ -1,6 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { User } from './models/User.model';
-import { UserService } from './services/user.service';
 
 @Pipe({
   name: 'refactorNumber'

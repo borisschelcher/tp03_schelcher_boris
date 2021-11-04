@@ -1,1 +1,15 @@
-<p>product works!</p>
+<form class="d-flex">
+    <input class="form-control me-2" type="search" placeholder="Search" [(ngModel)]="query" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+<div *ngFor="let p of produit$ | searchProduct: query" class="produit">
+    <div>
+        ref: {{ p.ref }}
+    </div>
+    <div>
+        libelle: {{ p.libelle }}
+    </div>
+    <div>
+        prix: {{ p.prix }}
+    </div>
+</div>

@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RefactorNumberPipe } from './refactor-number.pipe';
+import { SearchProductPipe } from './search-product.pipe';
 
 const appRoutes: Routes = [
   { path: "recap-data", component: RecapDataComponent },
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
     ProductComponent,
     NotFoundComponent,
     RefactorNumberPipe,
+    SearchProductPipe,
   ],
   imports: [
     BrowserModule,
